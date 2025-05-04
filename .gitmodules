@@ -19,3 +19,9 @@
 [submodule "src/colmap"]
 	path = src/colmap
 	url = git@github.com:colmap/colmap
+[submodule "src/OpenSfM"]
+	path = src/OpenSfM
+	url = git@github.com:mapillary/OpenSfM
+[submodule "src/ODM"]
+	path = src/ODM
+	url = git@github.com:OpenDroneMap/ODM
