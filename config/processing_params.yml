@@ -1,0 +1,55 @@
+# GMTSAR处理参数配置文件
+
+# 项目基本信息
+project:
+  name: "地表形变分析示例"
+  region: "测试区域"
+  description: "测试区域地表形变InSAR分析"
+
+# 数据路径配置
+paths:
+  raw_data: "../data/raw"
+  processed_data: "../data/processed"
+  results: "../data/results"
+
+# SAR数据参数
+sar_data:
+  satellite: "Sentinel-1"  # 卫星类型: Sentinel-1, ALOS-2, TerraSAR-X等
+  orbit_direction: "Descending"  # 轨道方向: Ascending或Descending
+  polarization: "VV"  # 极化方式: VV, HH等
+  
+# 处理参数
+processing:
+  # DEM参数
+  dem:
+    source: "SRTM"  # DEM数据源: SRTM, ASTER等
+    resolution: 30  # 分辨率 (米)
+  
+  # 干涉处理参数
+  insar:
+    master_date: "20210101"  # 主影像日期
+    slave_dates: ["20210113", "20210125", "20210206"]  # 从影像日期列表
+    filter_wavelength: 100  # 滤波波长 (米)
+    unwrap_method: "snaphu"  # 解缠方法: snaphu, mcf等
+    
+  # 时间序列分析参数
+  time_series:
+    reference_point: [121.5, 25.0]  # 参考点坐标 [经度, 纬度]
+    deformation_unit: "mm"  # 形变单位: mm, cm等
+    
+# 点云处理参数
+point_cloud:
+  conversion:
+    resolution: 10  # 点云分辨率 (米)
+    interpolation: "cubic"  # 插值方法: linear, cubic等
+    
+  analysis:
+    segmentation_method: "region_growing"  # 分割方法
+    classification_method: "kmeans"  # 分类方法
+    num_clusters: 5  # 分类类别数
+
+# 可视化参数
+visualization:
+  color_map: "jet"  # 颜色映射: jet, viridis等
+  min_deformation: -50  # 最小形变值 (mm)
+  max_deformation: 50  # 最大形变值 (mm) 

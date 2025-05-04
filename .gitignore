@@ -1,0 +1,55 @@
+# Python 编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 数据文件夹 - 排除大型数据文件
+data/raw/
+data/processed/
+data/results/
+
+# 日志文件
+*.log
+
+# 临时文件
+.tmp/
+.temp/
+
+# 个人设置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 虚拟环境
+venv/
+ENV/
+
+# CloudCompare临时文件
+*.bin 
