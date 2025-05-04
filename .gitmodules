@@ -1,0 +1,21 @@
+[submodule "src/CloudCompare"]
+	path = src/CloudCompare
+	url = https://github.com/CloudCompare/CloudCompare.git
+[submodule "src/gmtsar"]
+	path = src/gmtsar
+	url = https://github.com/gmtsar/gmtsar.git
+[submodule "src/pygmtsar"]
+	path = src/pygmtsar
+	url = git@github.com:AlexeyPechnikov/pygmtsar
+[submodule "src/S1orbits"]
+	path = src/S1orbits
+	url = git@github.com:AlexeyPechnikov/S1orbits.git
+[submodule "src/ParaView"]
+	path = src/ParaView
+	url = git@github.com:Kitware/ParaView.git
+[submodule "data/turkey"]
+	path = data/turkey
+	url = git@github.com:AlexeyPechnikov/s1-turkey-2023-earthquake2
+[submodule "src/colmap"]
+	path = src/colmap
+	url = git@github.com:colmap/colmap
