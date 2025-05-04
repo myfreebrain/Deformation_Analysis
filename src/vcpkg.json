@@ -1,0 +1,87 @@
+{
+  "name": "deformation-analysis-tools",
+  "version": "0.1.0",
+  "description": "地表形变分析系统的C++依赖库集合，包括CloudCompare、GMTSAR、COLMAP、OpenSfM和ODM子模块",
+  "homepage": "https://github.com/yourusername/Deformation_Analysis",
+  "license": "MIT",
+  "supports": "(windows | linux | osx) & (x64 | arm64)",
+  "dependencies": [
+    "boost-algorithm",
+    "boost-asio",
+    "boost-date-time",
+    "boost-filesystem",
+    "boost-foreach",
+    "boost-graph",
+    "boost-heap",
+    "boost-interprocess",
+    "boost-iostreams",
+    "boost-program-options",
+    "boost-property-map",
+    "boost-property-tree",
+    "boost-signals2",
+    {
+      "name": "ceres",
+      "features": [
+        "lapack",
+        "schur",
+        "suitesparse"
+      ]
+    },
+    "cgal",
+    "curl",
+    "eigen3",
+    "flann",
+    "freeimage",
+    "gdal",
+    "gflags",
+    "glog",
+    "gsl",
+    "hdf5",
+    {
+      "name": "jasper",
+      "default-features": false
+    },
+    "lapack",
+    "libgeotiff",
+    "libjpeg-turbo",
+    "libpng",
+    "libxml2",
+    "metis",
+    "opencv",
+    "opengl",
+    "openssl",
+    "pcl",
+    "qt5-base",
+    "sqlite3",
+    "suitesparse",
+    "tbb",
+    "tiff",
+    "vtk",
+    "zlib"
+  ],
+  "features": {
+    "gui": {
+      "description": "构建包含GUI支持的应用",
+      "dependencies": [
+        "glew",
+        "qt5-base"
+      ]
+    },
+    "cuda": {
+      "description": "启用CUDA加速",
+      "dependencies": [
+        "glew",
+        "cuda"
+      ]
+    },
+    "mpi": {
+      "description": "添加MPI并行计算支持",
+      "dependencies": [
+        "mpi"
+      ]
+    }
+  },
+  "default-features": [
+    "gui"
+  ]
+} 
