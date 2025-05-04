@@ -52,4 +52,12 @@ venv/
 ENV/
 
 # CloudCompare临时文件
-*.bin 
+*.bin
+
+# 忽略特定文件和目录
+.specstory/
+github.cmd
+g.py
+gen.py
+project.md
+projects.md 
